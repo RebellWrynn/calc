@@ -5,4 +5,6 @@ from time import time
 #return(a)
 
 a = (time() / 129) - (time() // 129)
-print(a)
+b = list(str(a))
+c = b[-3:]
+print()
