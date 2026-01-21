@@ -1,11 +1,14 @@
-from randomnum import test1,test2
+from randomnum import test
 
-print("Решите задачу:",test1(), "+", test2())
+a = test()
 
-sum = test1()+test2()
+b = test()
+
+sum = a+b
+
+print("Решите задачу:",a, "+", b)
 sumtest = int(input())
 
 if sum == sumtest:
     print("верно")
-else:
-    print("не верно")
+else: print("не верно")
