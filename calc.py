@@ -1,14 +1,38 @@
 from randomnum import test
 
-a = test()
+# генерация задачи
+def gener_task():
+    
+    a = test()
 
-b = test()
+    b = test()
 
-sum = a+b
+    num_sum = a + b
 
-print("Решите задачу:",a, "+", b)
-sumtest = int(input())
+    return a,b,num_sum
 
-if sum == sumtest:
-    print("верно")
-else: print("не верно")
+# ответ
+def user_answer():
+    user_answer = int(input())
+    return user_answer
+
+# сравнение ответа пользователя с решением
+def comparison(def_user_answer, num_sum):
+
+    if def_user_answer == num_sum:
+        print("верно")
+    else:
+        print("неверно")
+
+
+
+
+
+a,b,num_sum = gener_task()
+
+print(f"Решите задачу: {a} + {b}")
+
+x = user_answer()
+
+comparison(x,num_sum)
+
